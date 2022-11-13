@@ -30,19 +30,42 @@ func maxProduct(nums []int) int {
 
 		ans = int(math.Max(float64(ans), math.Max(float64(left), float64(right))))
 
-		// if left > right {
-		// 	if left > ans {
-		// 		ans = left
-		// 	}
-		// } else {
-		// 	if right > ans {
-		// 		ans = right
-		// 	}
-		// }
-
 	}
 
 	return ans
+}
+
+func maxProduct2(nums []int) int {
+	max, min, ans := nums[0], nums[0], nums[0]
+
+	for i := 1; i < len(nums); i++ {
+		temp := max
+
+		max = Max(Max(max*nums[i], min*nums[i]), nums[i])
+		min = Min(Min(min*nums[i], temp*nums[i]), nums[i])
+
+		if max > ans {
+			ans = max
+		}
+	}
+
+	return ans
+}
+
+func Min(a, b int) int {
+	if a < b {
+		return a
+	}
+
+	return b
+}
+
+func Max(a, b int) int {
+	if a > b {
+		return a
+	}
+
+	return b
 }
 
 func main() {
@@ -52,7 +75,7 @@ func main() {
 	fmt.Println(maxProduct([]int{-1, -2, -3}))
 	fmt.Println(maxProduct([]int{-3, -2, -1}))
 	fmt.Println(maxProduct([]int{-2, 0, 1}))
-	fmt.Println(maxProduct([]int{3, -1, 4}))
+	fmt.Println(maxProduct2([]int{3, -1, 4}))
 
 	// fmt.Println(maxProduct([]int{0, 0}))
 }
