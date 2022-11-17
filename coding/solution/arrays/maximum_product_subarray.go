@@ -39,10 +39,10 @@ func maxProduct2(nums []int) int {
 	max, min, ans := nums[0], nums[0], nums[0]
 
 	for i := 1; i < len(nums); i++ {
-		temp := max
+		temp := max * nums[i]
 
 		max = Max(Max(max*nums[i], min*nums[i]), nums[i])
-		min = Min(Min(min*nums[i], temp*nums[i]), nums[i])
+		min = Min(Min(min*nums[i], temp), nums[i])
 
 		if max > ans {
 			ans = max
@@ -51,6 +51,11 @@ func maxProduct2(nums []int) int {
 
 	return ans
 }
+
+/*
+  Good explanation
+  https://www.youtube.com/watch?v=lXVy6YWFcRM&ab_channel=NeetCode
+*/
 
 func Min(a, b int) int {
 	if a < b {

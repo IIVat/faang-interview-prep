@@ -2,6 +2,19 @@ package main
 
 import "fmt"
 
+/*
+ Example:
+
+   Left:     1   |   2   |  2*3  | 2*3*4|
+   Nums:     2   |   3   |   4   |   5  |
+   Right   3*4*5 |  4*5  |   5   |   1  |
+
+   Result:  Left*Right
+
+   Explanation: https://leetcode.com/problems/product-of-array-except-self/discuss/65622/Simple-Java-solution-in-O(n)-without-extra-space
+
+*/
+
 func productExceptSelfOptimal(nums []int) []int {
 
 	left := 1

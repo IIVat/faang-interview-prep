@@ -5,7 +5,37 @@ import "fmt"
 /*
 	Explanation:
 
+	Given array: [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+
+	i        nums[i]         sum                 max
+	0         -2             -2                  -2
+	1          1          -2 < 0 = 1           -2 < 1 = 1
+    2         -3          1 > 0 = 1 - 3 = -2    1 > -2 = 1
+	3          4          -2 < 0 = 4            1 < 4 = 4
+	4         -1 		  4 >0 = 4 - 1= 3	    4 > 3 = 4
+	5          2          3 >0 = 3 + 2 = 5      5 > 4 = 5
+	6          1          5 > 0 = 5 + 1 = 6     5 < 6 = 6
+	7         -5          6 > 0 = 6 - 5 = 1     6 > 1 = 6
+	8         4           1 > 0 = 1 + 4 = 5     6 > 5 = 6
+
+
+	Result: 6
 */
+
+func maxSubArrayConcise(nums []int) int {
+	max, sum := nums[0], nums[0]
+	for _, v := range nums[1:] {
+		if sum < 0 {
+			sum = v
+		} else {
+			sum += v
+		}
+		if max < sum {
+			max = sum
+		}
+	}
+	return max
+}
 
 func maxSubArray(nums []int) int {
 	maxSum := nums[0]

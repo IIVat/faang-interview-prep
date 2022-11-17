@@ -4,11 +4,11 @@ import "fmt"
 
 func isValid(s string) bool {
 	stack := []rune{}
-	parentheses := make(map[rune]rune)
-
-	parentheses[']'] = '['
-	parentheses[')'] = '('
-	parentheses['}'] = '{'
+	parentheses := map[rune]rune{
+		'}': '{',
+		')': '(',
+		']': '[',
+	}
 
 	for _, v := range s {
 		if len(stack) == 0 {
