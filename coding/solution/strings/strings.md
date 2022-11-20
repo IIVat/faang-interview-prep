@@ -1,0 +1,41 @@
+-[ ]# Strings
+-[ ]
+-[ ][Arrays from Leetcode](https://leetcode.com/tag/string/)
+-[ ]
+-[ ]## Easy - 8
+-[ ]
+-[ ]
+-[ ]
+-[ ]Add Bold Tag in String - Medium
+-[ ]Add Strings - Easy - DONE!!
+-[ ]Backspace String Compare - Done!!
+-[ ]Decode String
+-[ ]Delete Operation for Two Strings
+-[ ]Encode String with Shortest Length
+-[ ]Encode and Decode Strings
+-[ ]Expressive Words
+-[ ]Find And Replace in String
+-[ ]First Unique Character in a String
+-[ ]Group Shifted Strings
+-[ ]Guess the Word
+-[ ]K-Similar Strings
+-[ ]Letter Combinations of a Phone Number
+-[ ]Longest Word in Dictionary through Deleting
+-[ ]Magical String
+-[ ]Maximum Product of Word Lengths
+-[ ]Minimum Unique Word Abbreviation
+-[ ]Rearrange String k Distance Apart
+-[ ]Remove Duplicate Letters
+-[ ]Repeated String Match
+-[ ]Reverse String II
+-[ ]Reverse Vowels of a String
+-[ ]Shortest Completing Word
+-[ ]Similar String Groups
+-[ ]Unique Word Abbreviation
+-[ ]Valid Word Abbreviation
+-[ ]Valid Word Square
+-[ ]Word Abbreviation
+-[ ]Word Break
+-[ ]Word Break II
+-[ ]Word Search II
+-[ ]Word Squares
