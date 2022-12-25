@@ -64,7 +64,7 @@ func main() {
 
 //my solution
 
-func addStrings(num1 string, num2 string) string {
+func myAddStrings(num1 string, num2 string) string {
 	res := ""
 	tmp := 0
 	maxLength := max(len(num1), len(num2))
